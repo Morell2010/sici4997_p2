@@ -1,0 +1,30 @@
+/* Cancela el CSS-BODY-BACKGROUND del Shadow Login */
+body 
+{ background: #333 url('./') !important; }
+
+/* Aplicar el CSS-BODY-BACKGROUND del Shadow Login al MODAL */
+.modal-body {
+	background: transparent url('../images/bg.jpg') repeat top left fixed !important;
+     -webkit-background-size: cover;
+		-moz-background-size: cover;
+		  -o-background-size: cover; 
+			 background-size: cover;
+}
+
+.modal-header, 
+.modal-footer 
+{ visibility: hidden; display: none; }
+
+
+.jumbotron h1{
+	color:rgba(50,50,50,1);
+	margin-top:2%;
+	
+	
+}
+
+h2{
+	font-size:1.5em;
+	font-weight:bold;
+	
+}

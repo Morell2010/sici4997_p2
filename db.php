@@ -1,4 +1,6 @@
 <?php
+
+
 $dbHostname = 'localhost';
 $dbDatabase = 'elvis_morell';
 $dbUsername = 'elvis.morell';

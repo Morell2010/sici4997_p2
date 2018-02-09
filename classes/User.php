@@ -43,9 +43,9 @@ class User {
     
     public function save() {
         if ($this->id == -1) {
-            $sql = "INSERT INTO `usuario` (`id`, `username`, `password`, `first_name`, `last_name`, `email`) VALUES (NULL, ?, ?, '', '', ?);";
+            $sql = "INSERT INTO `usuario` (`id`, `username`, `email`, `password`) VALUES (NULL, ?, ?, ?);";
             
-            getResultFromSQL($sql, [$this->username, $this->password, $this->email]);
+            getResultFromSQL($sql, [$this->username,$this->email, $this->password]);
         }
     }
     

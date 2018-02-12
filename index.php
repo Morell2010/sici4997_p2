@@ -104,7 +104,7 @@ if ($action == 'login') {
     include './parts/body.php';
 }
 include './parts/footer.php';
-echo '<pre>' . print_r($_SESSION, true)  . '</pre>';
+//echo '<pre>' . print_r($_SESSION, true)  . '</pre>';//
 if (isset($_SESSION['loginTime'])) {
     echo '<pre>' . date('d-M-Y H:m:s', $_SESSION['loginTime']) . '</pre>';
 }

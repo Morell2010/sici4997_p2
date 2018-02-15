@@ -2,7 +2,7 @@
 
 <!--
 DESCRIPCION:
-Elvis Morell García		30 de diciembre de 2017
+Elvis Morell García		15 de febrero de 2018
 Daniel Álvarez Santiago		Prof. Omar Soto
 E&D Quick Lube	
 E&D Quick Lube es un taller donde se ofrecen varios productos y servicios para vehiculos.

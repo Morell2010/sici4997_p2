@@ -1,38 +1,10 @@
 <?php
-//ini_set('session.gc_maxlifetime', 15);
+
 $maxSessionTime = 60 * 30; // 30 minutes
 session_start();
 date_default_timezone_set('EST');
 
-/*$data = [
-         ['username' => 'morellpr',
-          'password' => 'test',
-          'email' => 'omarpr@gmail.com'],
-         ['username' => 'danipr',
-          'password' => 'test2',
-          'email' => 'danipr@apple.com'],
-         ];
-$action = (isset($_GET['a'])) ? $_GET['a'] : '';
-include './classes/User.php';
-if (isset($_SESSION['userID'])) {
-    $loggedUser = User::loadFromID($_SESSION['userID']);
-    
-    if (is_null($loggedUser)) {
-        session_destroy();
-        session_start();
-    } else {
-        if ((time() - $_SESSION['loginTime']) >= $maxSessionTime) {
-            session_destroy();
-            session_start();
-            $loggedUser = null;
-        } else if ($_SESSION['loginIP'] != $_SERVER['REMOTE_ADDR']) {
-            session_destroy();
-            session_start();
-            $loggedUser = null;
-            //showError('Unauthorized access! Session destroyed!');
-        }
-    }
-}*/
+
 $action = (isset($_GET['a'])) ? $_GET['a'] : '';
 include 'db.php';
 include './classes/User.php';
@@ -96,6 +68,10 @@ if ($action == 'login') {
     }
 } else if ($action == 'contacto') {
     include './parts/bcontactos.php';
+}else if ($action == 'doContact') {
+    include './parts/email.php';
+    //echo "Gracias";
+    showSuccess('Gracias por Contactarnos');
 } else if ($action == 'tienda') {
     include './parts/btienda.php';
 }else if ($action == 'citas') {

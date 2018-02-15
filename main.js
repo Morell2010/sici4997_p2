@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    //alert('Ya cargue');
     
     $('[name=username]').blur(function () {
         var username = $('[name=username]');
@@ -50,6 +49,31 @@ $(document).ready(function() {
             e.preventDefault();
         }
     });
+    
+    $('[name=contactButton]').click(function (e) { //contacto
+        var errors = "";                
+        var email = $('[name=email]');
+        
+               
+        if (!validateEmail(email.val())) {
+            errors += '<div class="alert alert-danger" role="alert">El formato del email es incorrecto.</div>';
+        }
+               
+        
+        $('div[name=contactErrors]').fadeOut('slow', function() {
+            $('div[name=contactErrors]').html('&nbsp;');
+            
+            if (errors != "") {
+                $('div[name=contactErrors]').html(errors);
+                $('div[name=contactErrors]').fadeIn('slow');
+            }
+        });
+        
+        if (errors != "") {
+            e.preventDefault();
+        }
+    });
+    
 });
 
 function validateEmail(email) {

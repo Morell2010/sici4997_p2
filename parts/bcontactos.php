@@ -50,31 +50,43 @@ input[type=submit]:hover {
 	  ¿Tiene alguna pregunta? <br>Contactenos en confianza.</p>  
 	  
 	<div class="container2" style="text-align:left;">
-  <form action="/action_page.php">
-    <label for="fname">Nombre</label>
-    <input type="text" id="fname" name="firstname" placeholder="Nombre">
+      
+<div name="contactErrors">
+          
+ </div>
+<form name="contactform" method="post" action="index.php?a=doContact">
 
-    <label for="lname">Apellido</label>
-    <input type="text" id="lname" name="lastname" placeholder="Apellido">
-	
-	<label for="email">E-mail</label>
-    <input type="text" id="email" name="email" placeholder="nombre@ejemplo.com">
 
-    <label for="motivo">Motivo</label>
-    <select id="motivo" name="motivo">
-      <option value="producto">Problema con producto o servicio</option>
-      <option value="pregunta">Pregunta o recomendacion</option>
-      <option value="otro">Otro</option>
-    </select>
+ 
+  <label for="first_name">Nombre *</label>
+ 
+ 
+  <input  type="text" name="first_name" maxlength="50" size="30">
+ 
 
-    <label for="subject"><br>Asunto</label>
-    <textarea id="subject" name="subject" placeholder="Escriba su mensaje aqui..." style="height:200px"></textarea>
 
-    <input type="submit" value="Enviar">
-  </form>
-</div>
-  </div>
+  <label for="last_name">Apellido *</label>
+
+ 
+  <input  type="text" name="last_name" maxlength="50" size="30">
+ 
+  <label for="email">Email *</label>
+       
+  <input  type="text" name="email" maxlength="80" size="30">
+ 
+  <label for="telephone">Numero de Telefono</label>
+ 
+  <input  type="text" name="telephone" maxlength="30" size="30">
+ 
+  <label for="comments">Comentarios *</label>
+ 
+  <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+ 
+  <input name="contactButton" type="submit" class="btn btn-primary" value="Submit"> 
+ 
+</form>
+
+	</div>
   
-</div>
-
-	
+    </div>
+    </div>

@@ -1,5 +1,4 @@
 <?php
-//$uname = (isset($_POST['username'])) ? $_POST['username'] : '';
 $uname = $_POST['username'] ?? '';
 ?>
 <div>

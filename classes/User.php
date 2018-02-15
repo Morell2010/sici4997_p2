@@ -6,7 +6,7 @@ class User {
     public $email;
     
     public static function loadFromID($id) {       
-        $records = getResultFromSQL('SELECT * FROM usuario WHERE id = ?', [$id]);
+        $records = getResultFromSQL('SELECT * FROM `user2` WHERE id = ?', [$id]);
         
         if (count($records) == 0) {
             return null;
@@ -24,7 +24,7 @@ class User {
     }
     
     public static function loadFromUsername($username) {
-        $records = getResultFromSQL('SELECT * FROM usuario WHERE username = ?', [$username]);
+        $records = getResultFromSQL('SELECT * FROM `user2` WHERE username = ?', [$username]);
         
         if (count($records) == 0) {
             return null;

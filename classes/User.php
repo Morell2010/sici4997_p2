@@ -6,7 +6,11 @@ class User {
     public $email;
     
     public static function loadFromID($id) {       
+<<<<<<< HEAD
         $records = getResultFromSQL('SELECT * FROM user WHERE id = ?', [$id]);
+=======
+        $records = getResultFromSQL('SELECT * FROM `user2` WHERE id = ?', [$id]);
+>>>>>>> cde2f5921dca81a78102f86a899d3401a48fade2
         
         if (count($records) == 0) {
             return null;
@@ -24,7 +28,11 @@ class User {
     }
     
     public static function loadFromUsername($username) {
+<<<<<<< HEAD
         $records = getResultFromSQL('SELECT * FROM user WHERE username = ?', [$username]);
+=======
+        $records = getResultFromSQL('SELECT * FROM `user2` WHERE username = ?', [$username]);
+>>>>>>> cde2f5921dca81a78102f86a899d3401a48fade2
         
         if (count($records) == 0) {
             return null;

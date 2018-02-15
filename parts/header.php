@@ -53,14 +53,14 @@ E&D Quick Lube es un taller donde se ofrecen varios productos y servicios para v
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					</button>
-					<a rel="nofollow" href="./index.html" class="navbar-brand" style="margin:0px;padding:0px;"><img src="https://raw.githubusercontent.com/Morell2010/fase2Rep/master/logo.png" style="height:50px;" alt="E&D-logo" ></a>
+					<a rel="nofollow" href="index.php?a=" class="navbar-brand" style="margin:0px;padding:0px;"><img src="https://raw.githubusercontent.com/Morell2010/fase2Rep/master/logo.png" style="height:50px;" alt="E&D-logo" ></a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 					
-						<li><a rel="nofollow" href="http://sici4997.uprp.edu/~elvis.morell/fase2/index.php">Inicio</a></li>
+						<li><a rel="nofollow" href="index.php?a=">Inicio</a></li>
 						
 						<li><a rel="nofollow" href="index.php?a=contacto">Contacto</a></li>
 						

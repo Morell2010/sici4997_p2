@@ -8,6 +8,7 @@ date_default_timezone_set('EST');
 $action = (isset($_GET['a'])) ? $_GET['a'] : '';
 include 'db.php';
 include './classes/User.php';
+include './classes/order.php';
 if (isset($_SESSION['userID'])) {
     $loggedUser = User::loadFromID($_SESSION['userID']);
     
@@ -37,7 +38,7 @@ if ($action == 'login') {
     $u = User::loadFromUsername($_POST['username']);
     
     if (is_null($u)) {
-        showError('The user doesn\'t exist.');
+        showError('El usuario no existe.');
         include './parts/login.php';
     } else if ($u->validatePassword($_POST['password'])) {
         $_SESSION['userID'] = $u->id;
@@ -45,7 +46,7 @@ if ($action == 'login') {
         $_SESSION['loginIP'] = $_SERVER['REMOTE_ADDR'];
         header('Location: index.php');
     } else {
-        showError('The entered password is incorrect!');
+        showError('Contrasena incorrecta!');
         include './parts/login.php';
     }
 }else if ($action == 'register') {
@@ -54,7 +55,7 @@ if ($action == 'login') {
     $u = User::loadFromUsername($_POST['username']);
     
     if ($u) {
-        showError('The username already exist.');
+        showError('Usuario ya existe.');
         include './parts/register.php';
     } else {
         $u = new User();
@@ -66,7 +67,13 @@ if ($action == 'login') {
         
         showSuccess('Welcome to E&D Quick Lube!');
     }
-} else if ($action == 'contacto') {
+}else if ($action == 'doTienda') {
+
+                
+        showSuccess('Compra realizada! Gracias! Pase por nuestra tienda para completar la transaccion.');
+        //include './parts/ordendetalles.php';
+    
+}else if ($action == 'contacto') {
     include './parts/bcontactos.php';
 }else if ($action == 'doContact') {
     include './parts/email.php';
@@ -79,7 +86,12 @@ if ($action == 'login') {
 }else {
     include './parts/body.php';
 }
+
+
 include './parts/footer.php';
+
+
+
 //echo '<pre>' . print_r($_SESSION, true)  . '</pre>';//
 if (isset($_SESSION['loginTime'])) {
     echo '<pre>' . date('d-M-Y H:m:s', $_SESSION['loginTime']) . '</pre>';

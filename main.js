@@ -1,4 +1,8 @@
 $(document).ready(function() {
+<<<<<<< HEAD
+=======
+    alert('Ya cargue');
+>>>>>>> cde2f5921dca81a78102f86a899d3401a48fade2
     
     $('[name=username]').blur(function () {
         var username = $('[name=username]');

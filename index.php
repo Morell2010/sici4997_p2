@@ -86,7 +86,7 @@ if ($action == 'login') {
         //echo $_POST['p1precio'];
         //include './parts/ordendetalles.php';
     
-<<<<<<< HEAD
+
 }else if ($action == 'contacto') {
     include './parts/bcontactos.php';
 }else if ($action == 'doContact') {
@@ -95,8 +95,7 @@ if ($action == 'login') {
     showSuccess('Gracias por Contactarnos');
 } else if ($action == 'tienda') {
     include './parts/btienda.php';
-=======
->>>>>>> 1b565f1319ac7647b864f86e4ecf7f2758896b79
+
 }else if ($action == 'citas') {
     include './parts/bcitas.php';
 }else {

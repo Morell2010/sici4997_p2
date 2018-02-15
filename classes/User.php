@@ -6,7 +6,7 @@ class User {
     public $email;
     
     public static function loadFromID($id) {       
-        $records = getResultFromSQL('SELECT * FROM `user2` WHERE id = ?', [$id]);
+        $records = getResultFromSQL('SELECT * FROM `user` WHERE id = ?', [$id]);
         
         if (count($records) == 0) {
             return null;
@@ -24,7 +24,7 @@ class User {
     }
     
     public static function loadFromUsername($username) {
-        $records = getResultFromSQL('SELECT * FROM `user2` WHERE username = ?', [$username]);
+        $records = getResultFromSQL('SELECT * FROM `user` WHERE username = ?', [$username]);
         
         if (count($records) == 0) {
             return null;
@@ -43,7 +43,7 @@ class User {
     
     public function save() {
         if ($this->id == -1) {
-            $sql = "INSERT INTO `usuario` (`id`, `username`, `email`, `password`) VALUES (NULL, ?, ?, ?);";
+            $sql = "INSERT INTO `user` (`id`, `username`, `email`, `password`) VALUES (NULL, ?, ?, ?);";
             
             getResultFromSQL($sql, [$this->username,$this->email, $this->password]);
         }

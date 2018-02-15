@@ -95,16 +95,25 @@ if ($action == 'login') {
         
         showSuccess('Welcome to E&D Quick Lube!');
     }
-}else if ($action == 'doTienda') {
-
-                
-        showSuccess('Compra realizada! Gracias! Pase por nuestra tienda para completar la transaccion.');
-        //include './parts/ordendetalles.php';
-    
 }else if ($action == 'contacto') {
     include './parts/bcontactos.php';
 } else if ($action == 'tienda') {
     include './parts/btienda.php';
+}else if ($action == 'doTienda') {
+    //$u = OrderDetails::loadFromID($_POST['id']);
+    //    $u = new OrderDetails();
+    //    
+    //    $u->id_producto = $_POST['1'];
+    //    $u->precio = $_POST['p1precio'];
+    //    $u->cantidad = $_POST['p1cantidad'];
+    //    $u->subtotal = $_POST['p1precio'*'p1cantidad'];
+    //    $u->save();
+                
+        showSuccess('Compra realizada! Gracias! Pase por nuestra tienda para completar la transaccion.');
+        
+        //echo $_POST['p1precio'];
+        //include './parts/ordendetalles.php';
+    
 }else if ($action == 'citas') {
     include './parts/bcitas.php';
 }else {

@@ -1,8 +1,6 @@
 $(document).ready(function() {
 
-    alert('Ya cargue');
-
-    
+        
     $('[name=username]').blur(function () {
         var username = $('[name=username]');
         
